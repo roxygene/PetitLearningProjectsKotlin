@@ -1,0 +1,16 @@
+
+.idea/
+build/
+out/
+.git/
+*.iml
+target/
+.gradle/
+build/
+kotlin-classes/
+*.log
+.idea/
+*.iml
+*.iws
+*.ipr
+logs/
