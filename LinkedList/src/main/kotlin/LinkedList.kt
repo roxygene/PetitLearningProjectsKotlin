@@ -1,3 +1,5 @@
+
+
 class LinkedList<T> {
     var head: Node<T>? = null
     var size: Int = 0
@@ -7,6 +9,9 @@ class LinkedList<T> {
     }
 
     fun getNode(index: Int): Node<T>? {
+        if(index < 0 || index >= size) {
+            throw IndexOutOfBoundsException()
+        }
         var counter = 0
             var node = head
         while(counter < index) {

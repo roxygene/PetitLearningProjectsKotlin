@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
+import java.lang.IndexOutOfBoundsException
 
 class LinkedListTest {
     private lateinit var list1: LinkedList<Int>
@@ -28,6 +29,12 @@ class LinkedListTest {
         list1.add(1)
         assertEquals(1, list1.getNode(0)?.data)
         assertNotEquals(0, list1.getNode(0)?.data)
+        assertThrows(IndexOutOfBoundsException::class.java) {
+            list1.getNode(-1)?.data
+        }
+        assertThrows(IndexOutOfBoundsException::class.java) {
+            list1.getNode(2)?.data
+        }
     }
 
     @Test
