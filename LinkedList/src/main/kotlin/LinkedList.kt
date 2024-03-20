@@ -15,12 +15,12 @@ class LinkedList<T>(var head: Node<T>? = null) {
         }
     }
 
-    fun countTheSizeOfList(headNode: Node<T>?): Int {
-        if(headNode == null) {
+    fun countTheSizeOfList(firstNode: Node<T>?): Int {
+        if(firstNode == null) {
             return 0
         }
         var counter = 1
-        var node = headNode
+        var node = firstNode
         while (node?.next != null) {
             counter++
             node = node?.next
